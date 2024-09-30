@@ -1,0 +1,374 @@
+:root{
+    /* 1.Tạo các biến màu: */
+
+    /* background */
+    --colorLight_one:#FFFFFF; 
+
+    /* background button, todolist, input */
+    --colorLight_two: #f2f2f2;
+    --color-three_light_buttonDark: #000000;
+    --color-three_light_buttonLight: #f2f2f2; 
+
+
+    --color-four_light_Text: #333;
+
+    /* 2. FontFamily: */
+    --font: 'DM Sans', serif;
+
+
+    /*2. Dark Mode:*/
+    --color-dark_one: #232122;
+    --color-dark_two: #333333;
+
+    --color-dark_DarkText: #FFFFFF;
+}
+body{
+    position: relative;
+    background-color: var(--colorLight_one);
+}
+*{
+    box-sizing: border-box;
+}
+
+
+/* I. MENU TAB */
+
+.menu-tab{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 80px;
+    height: 100%;
+    border: 2px solid var(--colorLight_two);
+    box-shadow: 2px 1px 1px #AAA;
+}
+.menu-tab .sidebar-item{
+    width: 100%;
+    padding: 30px;
+}
+.menu-tab .sidebar-item i{
+    color: var(--color-four_light_Text);
+}
+.menu-tab .sidebar-item i:hover{
+    cursor: pointer;
+}
+.menu-tab .log-out-sidebar{
+    margin-top: 280px;
+}
+
+
+
+/* II. Main */
+.main{
+    margin-left: 80px;
+}
+.main .container-main{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+
+    /* 1. Header */
+.main .container-main .header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border: 2px solid gray;
+    box-shadow: 2px 1px 1px #AAA;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.main .container-main .header .search_bar{
+    background-color: var(--colorLight_two);
+    padding: 10px;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 50px;
+    color: var(--color-four_light_Text);
+}
+.main .container-main .header .search_bar input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 600;
+    background: var(--colorLight_two);
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.main .container-main .header .date{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 20px;
+    color: var(--color-four_light_Text);
+}
+.main .container-main .header .date span{
+    width: 100%;
+    margin-top: 7px;
+    font-size: 18px;
+}
+.main .container-main .header .darklightmode{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.main .container-main .header .darklightmode .darklightmode-item{
+    margin-right: 8px;
+    padding: 10px;
+}
+.main .container-main .header .darklightmode .darklightmode-item i{
+    margin-right: 20px;
+}
+.main .container-main .header .darklightmode #lightmode{
+    background-color: var(--color-three_light_buttonDark);
+    color: var(--colorLight_one);
+    border-radius: 25px;
+}
+.main .container-main .header .darklightmode #lightmode i{
+    color: var(--colorLight_one);
+}
+.main .container-main .header .darklightmode #darkmode{
+    background-color: var(--color-three_light_buttonLight);
+    border-radius: 25px;
+    color: var(--color-four_light_Text);
+}
+.main .container-main .header .darklightmode #darkmode i{
+    color: var(--color-four_light_Text);
+}
+
+
+    /* 2. Board */
+.main .container-main .board{
+    margin-top: 20px;
+}
+.main .container-main .board{
+    margin-top: 20px;
+}
+.main .container-main .board .headboard{
+    display: flex;
+    align-items: center;
+    color: var(--color-four_light_Text);
+}
+.main .container-main .board .headboard .title{
+    font-size: 25px;
+    margin-right: 15px;
+}
+.main .container-main .board .headboard #reloadSearched{
+    font-size: 20px;
+    cursor: pointer;
+}
+.main .container-main .board .container-board{
+    display: flex;
+    justify-content: space-between;
+}
+
+    /* a. Item */
+.main .container-main .board .container-board .board-item{
+    width: 32%;
+    background-color: var(--colorLight_two);
+    height: 100%;
+    border-radius: 15px;
+}
+
+.main .container-main .board .container-board .board-done_missed{
+    background-color: var(--colorLight_one);
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .container-main .board .container-board .done{
+    background-color: var(--colorLight_two);
+    height: 100%;
+    border-radius: 15px;
+}
+.main .container-main .board .container-board .missed{
+    background-color: var(--colorLight_two);
+    height: 100%;
+    border-radius: 15px;
+}
+.main .container-main .board .container-board .board-item .head{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+}
+.main .container-main .board .container-board .board-item .head span {
+    font-size: 20px;
+    color: var(--color-four_light_Text);
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+}
+.main .container-main .board .container-board .board-item .head .board-header-icon {
+    font-size: 20px;
+    color: var(--color-four_light_Text);
+    margin-left: 20px;
+
+}
+.main .container-main .board .container-board .board-item .head .board-header-icon:hover {
+    cursor: pointer;
+    background: var(--colorLight_one);
+    border-radius: 8px;
+}
+
+
+    /* b. task */
+.main .container-main .board .container-board .board-item .container-item .task-list{
+    padding: 15px;
+}
+
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item{
+    padding: 10px;
+    background-color: var(--colorLight_one);
+    border-radius: 15px;
+    border: 2px solid rgb(190, 187, 187);
+    box-shadow: 1px 1px 1px 1px rgb(190, 187, 187);
+    color: var(--color-four_light_Text);
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+        /* -task-header */
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item .item-head{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item .item-head span {
+    font-size: 14px;
+    color: var(--color-four_light_Text);
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+}
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item .item-head .fa-solid {
+    font-size: 15px;
+    color: var(--color-four_light_Text);
+    margin-left: 20px;
+}
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item .item-head .fa-solid:hover {
+    cursor: pointer;
+    background: var(--colorLight_one);
+    border-radius: 8px;
+}
+       /* - task-description */
+.main .container-main .board .container-board .board-item .container-item .task-list .task-item .item-title{
+    font-size: 20px;
+    margin-top: 8px;
+}
+/* .main .container-main .board .container-board .board-item .container-item .task-list .task-item .done{
+    display: none;
+} */
+
+    /*c. Add Task:*/
+.task-list .inputTask{
+    padding: 10px;
+    background-color: var(--colorLight_one);
+    border-radius: 15px;
+    border: 3px solid rgb(190, 187, 187);
+    box-shadow: 1px 1px 1px 1px rgb(190, 187, 187);
+    color: var(--color-four_light_Text);
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+.task-list .inputTask .inputTask-head{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.task-list .input-titleTask{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.task-list .input-descriptionTask{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.task-list .inputTime{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.task-list .inputTime2{
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.task-list .input-typeTask{
+    width: 50%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.task-list .inputTask .inputTask-head .fa-check{
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.task-list .inputTask .inputTask-head .fa-check:hover{
+    background-color: var(--color-three_light_buttonLight);
+}
+.task-list .inputTask .inputTask-head .fa-x{
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 65%;
+}
+.task-list .inputTask .inputTask-head .fa-x:hover{
+    background-color: var(--color-three_light_buttonLight);
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
